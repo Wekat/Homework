@@ -1,17 +1,15 @@
 /*Request a length of a side of a square from a user and display 
 the perimeter of the square in the console.*/
 
-let length = prompt('Length of square side');
-console.log(length * 4);
+// let length = prompt('Length of square side');
+// console.log(length * 4);
 
 /*Request a user’s year of birth, count their age, and display 
 the result to the console. Store the current year as a constant.*/
 
-// let yob = prompt('Insert year of birth');
-// console.log(yob);
-
-// const YoB = yob;
-// console.log(YoB);
+let yob = prompt('Insert year of birth');
+const age = 2020 - yob;
+console.log(age);
 
 /*Request a distance in kilometers between the two cities from a user, 
 and the time they want to cover it within. Count the speed needed to be on time.*/
