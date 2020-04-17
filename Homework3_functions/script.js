@@ -120,19 +120,13 @@ function timeFromSec (seconds) {
     // let sec = seconds - (hour * 3600) - (min * 60);
     let sec = Math.floor(seconds) % 60;
 
-    if (sec == 0) {
-        sec = "00";
-    } else if (sec < 10) {
+    if (sec < 10) {
         sec = "0" + sec;
     }
-    if (min == 0) {
-        min = "00"
-    } else if (min < 10) {
+    if (min < 10) {
         min = "0" + min;
     }
-    if (hour == 0) {
-        hour = "00"
-    } else if (hour < 10) {
+    if (hour < 10) {
         hour = "0" + hour;
     }
 
