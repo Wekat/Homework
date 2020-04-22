@@ -16,12 +16,21 @@ let car = {
         let time = distance / this["average speed"];
         let timeWithBreak = time;
 
-        if (time <= 4) {
+        if (time > 4) {
             timeWithBreak = Math.floor(time / 4) + time;
         };
 
         console.log(timeWithBreak);
     }
+    /* Alternative function
+    function (distance) {
+        let time = distance / this["average speed"];
+        let timeWithBreak = Math.floor(time / 4) + time
+    if (time%4 === 0) {
+             timeWithBreak -= 1;
+        }
+        console.log(timeWithBreak);
+    }*/
 };
 
 // 1) A method that displays the car info;
@@ -32,7 +41,7 @@ car['car info']();
 average speed (object methods can also accept parameters as regular functions). 
 Note that every 4 hours the driver has to take a 1-hour break. */
 
-car.timeForTravel(1000);
+car.timeForTravel(400);
 
 
 /* And the tricky one. Create an object that describes time (hours, minutes, seconds) 
