@@ -134,20 +134,40 @@ let classroomArray = [
 
 // 1) Display all the classrooms;
 
-let classroomList = classroomArray.map(function(item) {
-    let list = item;
-    return list;
-});
+// let classroomList = classroomArray.map(function(item) {
+//     let list = item;
+//     return list;
+// });
 
-console.log(classroomList);
+// console.log(classroomList);
+
+function classroomList(item) {
+    document.write(`<p>Name: ${item.name}</p><p>Seats: ${item.seats}</p><p>Faculty: ${item.faculty}</p><br>`);
+    // for (let key in item) {
+    //     document.write(`${key}: ${item[key]}<br>`);
+        
+    // }
+};
+
+//classroomArray.forEach(classroomList);
 
 // 2) Display all the classrooms for a given faculty;
 
-let facultyRooms = classroomArray.filter(function(item) {
-    return item.faculty == 'History'; 
-})
+// let facultyRooms = classroomArray.filter(function(item) {
+//     return item.faculty == 'History'; 
+// })
 
-console.log (facultyRooms);
+// console.log (facultyRooms);
+
+function displayFacultyRooms(faculty) {
+    for (let room of classroomArray) {
+        if (room.faculty === faculty) {
+            document.write(`<p>Name: ${room.name}</p><p>Seats: ${room.seats}</p><p>Faculty: ${room.faculty}</p><br>`);
+        };
+    };
+};
+
+//displayFacultyRooms('History');
 
 /* 3) Display only the classrooms that would fit a given group. 
 A group object contains a name, the number of students, and the faculty name. */
@@ -161,8 +181,18 @@ function Group(name, numOfStudents, faculty) {
 let givenGroup = new Group('the Group', 12, 'Economics');
 // console.log(givenGroup);
 
-let appropriateRooms = classroomArray.filter(function(item) {
-    return item.seats >= givenGroup['number of students'] && item.faculty == givenGroup.faculty;
-})
+// let appropriateRooms = classroomArray.filter(function(item) {
+//     return item.seats >= givenGroup['number of students'] && item.faculty == givenGroup.faculty;
+// })
 
-console.log(appropriateRooms);
+// console.log(appropriateRooms);
+
+function appropriateRooms (aGroup) {
+    for (let room of classroomArray) {
+        if (room.seats >= aGroup['number of students'] && room.faculty == aGroup.faculty) {
+            document.write(`<p>Name: ${room.name}</p><p>Seats: ${room.seats}</p><p>Faculty: ${room.faculty}</p><br>`);
+        };
+    };
+};
+
+appropriateRooms(givenGroup);

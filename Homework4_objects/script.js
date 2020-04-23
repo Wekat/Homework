@@ -71,7 +71,11 @@ time = {
         let mm = newMin < 10 ? '0' + newMin : newMin;
         let ss = newSec < 10 ? '0' + newSec : newSec;
 
-        return `${hh}:${mm}:${ss}`;
+        this.hours = newHour;
+        this.minutes = newMin;
+        this.seconds = newSec;
+
+        //return `${hh}:${mm}:${ss}`;
     },
     changeMinutes: function(minutes) {
         let newMin = (Math.floor(minutes) % 60) + this.minutes;
@@ -81,7 +85,10 @@ time = {
         let mm = newMin < 10 ? '0' + newMin : newMin;
         let ss = this.seconds < 10 ? '0' + this.seconds : this.seconds;
 
-        return `${hh}:${mm}:${ss}`;
+        this.hours = newHour;
+        this.minutes = newMin;
+
+        //return `${hh}:${mm}:${ss}`;
     },
     changeHours: function(hours) {
         let newHour = hours + this.hours;
@@ -90,7 +97,9 @@ time = {
         let mm = this.minutes < 10 ? '0' + this.minutes : this.minutes;
         let ss = this.seconds < 10 ? '0' + this.seconds : this.seconds;
 
-        return `${hh}:${mm}:${ss}`;
+        this.hours = newHour;
+
+        //return `${hh}:${mm}:${ss}`; 
     }
 
 }
@@ -101,12 +110,15 @@ console.log(time["hh:mm:ss"]());
 
 // 2) A method for changing the time by a given amount of seconds;
 
-console.log(time.changeSeconds(30));
+time.changeSeconds(30);
+console.log(time);
 
 // 3) A method for changing the time by a given amount of minutes;
 
-console.log(time.changeMinutes(75));
+time.changeMinutes(75);
+console.log(time);
 
 // 4) A method for changing the time by a given amount of hours.
 
-console.log(time.changeHours(7));
+time.changeHours(7);
+console.log(time);
