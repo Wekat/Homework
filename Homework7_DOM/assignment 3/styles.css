@@ -16,18 +16,14 @@ body {
     height: 60%;
 }
 
-.green {
+#green.active {
     fill: #abbd81;
 }
 
-.yellow {
+#yellow.active {
     fill: #f5e169;
 }
 
-.red {
+#red.active {
     fill: #e15b64
-}
-
-.grey {
-    fill: rgb(58, 57, 57);
 }

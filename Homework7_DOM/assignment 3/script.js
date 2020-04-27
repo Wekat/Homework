@@ -2,28 +2,45 @@
 
 let btn = document.getElementById('myBtn');
 
-btn.addEventListener('click', changeColor);
+//alt1
 
-let red = document.getElementById('red');
-let yellow = document.getElementById('yellow');
-let green = document.getElementById('green');
+// btn.addEventListener('click', changeColor);
 
-function changeColor () {
+// let red = document.getElementById('red');
+// let yellow = document.getElementById('yellow');
+// let green = document.getElementById('green');
 
-    if (red.classList.contains('red')) {
-        red.classList.add('grey');
-        red.classList.remove('red');
-        yellow.classList.add('yellow');
-        yellow.classList.remove('grey');
-    };
-    if (yellow.classList.contains('yellow')) {
-        yellow.classList.add('grey');
-        yellow.classList.remove('yellow');
-        green.classList.add('green');
-    };
-    if (green.classList.contains('green')) {
-        green.classList.add('grey');
-        green.classList.remove('green');
-        red.classList.add('red');
-    };
-};
+// function changeColor () {
+
+//     if (red.classList.contains('active')) {
+//         red.classList.remove('active');
+//         yellow.classList.add('active');
+//     }
+//     else if (yellow.classList.contains('active')) {
+//         yellow.classList.remove('active');
+//         green.classList.add('active');
+//     }
+//     else if (green.classList.contains('active')) {
+//         green.classList.remove('active');
+//         red.classList.add('active');
+//     }
+// };
+
+// alt 2
+
+let lights = [document.getElementById('red'), 
+document.getElementById('yellow'), 
+document.getElementById('green')];
+
+let i = 0;
+
+function changeLights () {
+    lights[i].classList.remove('active');
+    console.log(i);
+    i = (i + 1) % 3;
+    console.log(i);
+    lights[i].classList.add('active');
+}
+
+btn.addEventListener('click', changeLights);
+
