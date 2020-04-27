@@ -25,6 +25,20 @@ class RegularMarker {
         
     }
 
+    input2(stringOfText) {
+        this.stringOfText = stringOfText;
+        let newText = '';
+
+        for (let character of stringOfText) {
+          if (this.inkAmount === 0) break; // exit the loop if there is no ink
+          newText += character; // add character to the new string
+          if (character !== ' ') { // decrease the amount of ink for non-space characters
+            this.inkAmount -= 0.5;
+          }
+        }
+        document.write(`<p style="color: ${this.color}">${newText}</p>`);
+    }
+
     //This method below did not really work out as I wanted so gave up at the end. If you have any comments feel free to share :)
 
     // input2 (stringOfText) {
