@@ -15,7 +15,7 @@ let closeBtn = document.getElementById('closeBtn');
 btn.onclick = displayModal;
 
 function displayModal() {
-  modal.style.display = "block";
+  modal.style.display = "block"; //also possibility to add a visibility class
 }
 
 // When the user clicks on close button, close the modal. Also another way of writing the above event that could be written in the same way as this.
