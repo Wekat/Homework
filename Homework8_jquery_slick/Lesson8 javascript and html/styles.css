@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'JF-Flat-regular';
+    src: url('font/JF-Flat-regular.ttf');
+}
+
+.main_container {
+    background: #F6704B;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15vh;
+}
+
+.title_box {
+    width: 380px;
+    height: 100px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    font-family: 'JF-Flat-regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.img {
+    width: 58px;
+    height: 58px;
+    margin-right: 40px;
+}
+
+.extended_box {
+    width: 380px;
+    padding: 20px 15px;
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.45);
+    display: none;
+    font-family: 'JF-Flat-regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.location {
+    background: #620808;
+    color: #FFE9C1;
+}
+
+.music {
+    background: #A53F3F;
+    color: #F4CE74;
+}
+
+.notes {
+    background: #F4CE74;
+    color: #620808;
+}
+
+.books {
+    background: #FFE9C1;
+    color: #620808;
+}
+
+.tendances {
+    background: #D5441C;
+    color: #FFE9C1;
+}

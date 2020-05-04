@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    color: #FFFFFF;
+    padding-top: 15px;
+}
+
+.header {
+    max-width: 1380px;
+    height: 49px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 36px;
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 35px;
+    font-size: 14px;
+}
+
+.nav-item:hover {
+    color: #EECD31;
+}
+
+.container {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.slick-prev::before {
+    background-image: url(img/arrow-prev.svg);
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 36px;
+    width: 20px;
+    color: transparent;
+}
+
+.slick-next::before {
+    background-image: url(img/arrow-next.svg);
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 36px;
+    width: 20px;
+    color: transparent;
+}
+
+.slick-dots {
+    color: white;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    text-align: center;
+}
+
+.p {
+    margin-top: 21px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+    max-width: 750px;
+}
+
+.btn {
+    margin-top: 38px;
+    width: 184px;
+    height: 57px;
+    background: #EECD31;
+    border-radius: 25px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 16px 25px;
+}
+
+.btn:hover {
+    background: rgb(175, 152, 36);
+}
+
+.slider-project {
+    display: flex;
+    align-items: flex-end;
+}
+
+.project-text {
+    margin-left: 20px;
+    width: 500px;
+}
+
+.project-heading {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.project-img {
+    height: 410px;
+}
+
+.img1 {
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+
+.img2 {
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+}
