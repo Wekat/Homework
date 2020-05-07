@@ -10,10 +10,9 @@ $('#btn').on('click', () => {
     .done(function(movie) {
         console.log(movie);
         $('.movie-section__info').empty(); //empty the div so that it is not filled up when new search is made
+        $('.movie-section__poster').empty(); //empty the div so that it is not filled up when new search is made
 
-        //insert if movie.Response == true see below
-        // if movie.Response == false Write text: Movie not found
-        if (movie.Response == 'True') {
+        if (movie.Response == 'True') { //movie exists in database
             let movieInfo = $('<div></div>');
             movieInfo.append(`
             <h3>Title: ${movie.Title}</h3>
@@ -28,7 +27,12 @@ $('#btn').on('click', () => {
             <p>IMDB Rating: ${movie.imdbRating}</p>
             `)
             $('.movie-section__info').append(movieInfo);
-        } else {
+
+            let poster = $('<div></div>');
+            poster.append(`<img src="${movie.Poster}" alt=""></img>`)
+            $('.movie-section__poster').append(poster);
+            
+        } else { //movie does not exist in database
             let movieInfo = $('<div></div>');
             movieInfo.append('<h2>Movie not found!</h2>')
             $('.movie-section__info').append(movieInfo);
