@@ -20,7 +20,8 @@ $('#btn').on('click', () => {
             let movieInfo = $('<div class="movie-info"></div>');
             movieInfo.append(`
             <h3>${movie.Title}</h3>
-            <p>Story: ${movie.Plot}</p>
+            <br>
+            <p class="text story"><span class="bold">Story</span>: ${movie.Plot}</p>
             <p>Actors: ${movie.Actors}</p>
             <p>Director: ${movie.Director}</p>
             <p>Genre: ${movie.Genre}</p>
