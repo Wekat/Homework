@@ -15,12 +15,17 @@
 }
 
 .heading {
+  font-family: 'Poiret One', cursive;
   color: white;
   text-align: center;
+  font-weight: 400;
+  font-size: 60px;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .search-section {
-  width: 70%;
+  width: 50%;
   margin: 40px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,6 +39,43 @@
   width: 100%;
   margin-right: 20px;
   padding-left: 10px;
+  background-color: black;
+  border: 0.5px solid white;
+  border-radius: 4px;
+  color: whitesmoke;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.search-field ::-webkit-input-placeholder {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.search-field :-ms-input-placeholder {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.search-field ::-ms-input-placeholder {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.search-field ::placeholder {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.search-button {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  color: white;
+  border: none;
+  background-color: #6c1d1dfc;
+  width: 150px;
+  height: 30px;
+  border-radius: 4px;
 }
 
 .movie-section {
@@ -45,5 +87,26 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.backdrop {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+}
+
+.poster {
+  height: 330px;
+  padding-right: 20px;
+}
+
+.poster__img {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.movie-info {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
 }
 /*# sourceMappingURL=styles.css.map */

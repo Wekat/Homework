@@ -11,11 +11,15 @@ $('#btn').on('click', () => {
         console.log(movie);
         $('.movie-section__info').empty(); //empty the div so that it is not filled up when new search is made
         $('.movie-section__poster').empty(); //empty the div so that it is not filled up when new search is made
+        let movieSection = document.querySelector('.movie-section');
+        console.log(movieSection);
+        movieSection.classList.add('backdrop')
+        
 
         if (movie.Response == 'True') { //movie exists in database
-            let movieInfo = $('<div></div>');
+            let movieInfo = $('<div class="movie-info"></div>');
             movieInfo.append(`
-            <h3>Title: ${movie.Title}</h3>
+            <h3>${movie.Title}</h3>
             <p>Story: ${movie.Plot}</p>
             <p>Actors: ${movie.Actors}</p>
             <p>Director: ${movie.Director}</p>
@@ -28,8 +32,8 @@ $('#btn').on('click', () => {
             `)
             $('.movie-section__info').append(movieInfo);
 
-            let poster = $('<div></div>');
-            poster.append(`<img src="${movie.Poster}" alt=""></img>`)
+            let poster = $('<div class="poster"></div>');
+            poster.append(`<img class="poster__img" src="${movie.Poster}" alt=""></img>`)
             $('.movie-section__poster').append(poster);
             
         } else { //movie does not exist in database
