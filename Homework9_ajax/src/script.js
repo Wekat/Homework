@@ -21,15 +21,15 @@ $('#btn').on('click', () => {
             movieInfo.append(`
             <h3>${movie.Title}</h3>
             <br>
-            <p class="text story"><span class="bold">Story</span>: ${movie.Plot}</p>
-            <p>Actors: ${movie.Actors}</p>
-            <p>Director: ${movie.Director}</p>
-            <p>Genre: ${movie.Genre}</p>
-            <p>Year: ${movie.Year}</p>
-            <p>Runtime: ${movie.Runtime}</p>
-            <p>Language: ${movie.Language}</p>
-            <p>Awards: ${movie.Awards}</p>
-            <p>IMDB Rating: ${movie.imdbRating}</p>
+            <p class="text plot">${movie.Plot}</p>
+            <p class="text actors"><span class="info-heading">Actors</span>: ${movie.Actors}</p>
+            <p class="text director"><span class="info-heading">Director</span>: ${movie.Director}</p>
+            <p class="text genre"><span class="info-heading">Genre</span>: ${movie.Genre}</p>
+            <p class="text year"><span class="info-heading">Year</span>: ${movie.Year}</p>
+            <p class="text runtime"><span class="info-heading">Runtime</span>: ${movie.Runtime}</p>
+            <p class="text language"><span class="info-heading">Language</span>: ${movie.Language}</p>
+            <p class="text awards"><span class="info-heading">Awards</span>: ${movie.Awards}</p>
+            <p class="text rating"><span class="info-heading">IMDB rating</span>: ${movie.imdbRating}</p>
             `)
             $('.movie-section__info').append(movieInfo);
 

@@ -79,7 +79,7 @@
 }
 
 .movie-section {
-  width: 70%;
+  width: 80%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,5 +108,21 @@
 .movie-info {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
+}
+
+.plot {
+  font-style: italic;
+}
+
+.text {
+  margin-bottom: 10px;
+}
+
+.text:last-of-type {
+  margin-bottom: 0;
+}
+
+.info-heading {
+  font-weight: bold;
 }
 /*# sourceMappingURL=styles.css.map */
