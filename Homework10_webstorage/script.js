@@ -1,15 +1,51 @@
-/* Create a task list using the local storage. On the page a user should see an input form and a button. After the user types a task description in the input and clicks on the button, the task has to be added to the local storage and also displayed on the page. After the user reloads the page, all the saved tasks have to be displayed on the page.
+/* Create a task list using the local storage. On the page a user should see an input form and a button. 
+After the user types a task description in the input and clicks on the button, the task has to be added 
+to the local storage and also displayed on the page. After the user reloads the page, all the saved 
+tasks have to be displayed on the page.
 Store the task list as a stringified array. You can use jQuery to simplify DOM manipulations. */
 
-let newTask = document.getElementById('input-field').value; //getting the input value for new task
-let button = document.getElementsByClassName('btn');
 
-button.onclick = () =>
-    window.localStorage.setItem('task', 'newTask');
-    console.log(localStorage.getItem('task'));
+let button = document.getElementById('btn');
+let storage = [];
 
-    // let taskList = $('<ul></ul>');
-    // taskList.append(`
-    // <li>${localStorage.getItem('task')}</li>
-    // `);
-    // $('#taskList').append(taskList);
+button.onclick = () => {
+    window.localStorage.clear(); //clear storage in between
+    let newTask = document.getElementById('input-field').value; //getting the input value for new task
+    storage.push(newTask); //adding newTask to storage array
+    console.log(storage);
+
+    window.localStorage.setItem('task', storage); //update storage with new added task
+
+    $('#taskList').empty();
+    for (i = 0; i < storage.length; i++) {
+        let taskList = $('<ul></ul>');
+        taskList.append(`
+        <li>${storage[i]}</li>
+        `);
+        $('#taskList').append(taskList);
+    }
+}
+
+
+// button.onclick = () => {
+//     let newTask = document.getElementById('input-field').value; //getting the input value for new task
+//     let tasks = localStorage.getItem('task');
+    
+//     if (tasks == null) {
+//         tasks = [];
+//     } else {
+//         tasks.push(`${newTask}`);
+//     }
+//     console.log(tasks);
+
+//     window.localStorage.setItem('task', tasks);
+    
+
+//     for (let task of tasks) {
+//         let taskList = $('<ul></ul>');
+//         taskList.append(`
+//         <li>${task.task}</li>
+//         `);
+//         $('#taskList').append(taskList);
+//     }
+// };
