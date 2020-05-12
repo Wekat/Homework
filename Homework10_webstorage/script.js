@@ -48,10 +48,8 @@ function handleInput () { //what happens on onclick and on keypress. Before this
 function populateList () {
     $('#taskList').empty(); //empty task list before making new
     for (i = 0; i < storage.length; i++) { //loop through storage array to create list
-        let taskList = $('<ul></ul>');
-        taskList.append(`
-        <li class="list-item">${storage[i]}</li>
-        `);
+        let taskList = $('<li class="list-item"></li>');
+        taskList.append(`${storage[i]}`);
         $('#taskList').append(taskList);
     }
 }
