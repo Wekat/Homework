@@ -14,6 +14,8 @@ button.onclick = () => {
 
     if (storage == null) {
         storage = []; //set storage to an array
+    } else {
+        storage = [storage]
     };
 
     storage.push(newTask); //adding newTask to storage array
@@ -30,27 +32,3 @@ button.onclick = () => {
         $('#taskList').append(taskList);
     }
 }
-
-
-// button.onclick = () => {
-//     let newTask = document.getElementById('input-field').value; //getting the input value for new task
-//     let tasks = localStorage.getItem('task');
-    
-//     if (tasks == null) {
-//         tasks = [];
-//     } else {
-//         tasks.push(`${newTask}`);
-//     }
-//     console.log(tasks);
-
-//     window.localStorage.setItem('task', tasks);
-    
-
-//     for (let task of tasks) {
-//         let taskList = $('<ul></ul>');
-//         taskList.append(`
-//         <li>${task.task}</li>
-//         `);
-//         $('#taskList').append(taskList);
-//     }
-// };
