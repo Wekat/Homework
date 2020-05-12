@@ -56,8 +56,10 @@ function populateList () {
     }
 }
 
-clearButton.click (clear);
+clearButton.click (clear); //calls the function clear
 
-function clear () {
+function clear () { //this function will clear the storage and reload the page to clear list from page
+    console.log(5);
     window.localStorage.clear();
+    location.reload();
 }
