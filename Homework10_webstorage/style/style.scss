@@ -1,11 +1,18 @@
 .container-top {
     width: 100%;
-    padding-top: 30px;
     padding-bottom: 20px;
 }
 
+.heading {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 60px;
+}
+
 .input-area {
-    width: 300px;
+    width: 400px;
     height: 30px;
     margin: auto;
     display: flex;
@@ -17,12 +24,16 @@
 }
 
 .input-field {
-    width: 150px;
+    width: 200px;
     border: none;
     padding: 5px;
 
     &:focus {
         outline: none;
+    }
+
+    &::placeholder {
+        font-family: 'Reenie Beanie', cursive;
     }
 }
 
@@ -30,10 +41,12 @@
     border: none;
     background: none;
     cursor: pointer;
+    font-family: 'Fredericka the Great', cursive;
+
 }
 
 .clear {
-    width: 300px;
+    width: 200px;
     height: 30px;
     margin: auto;
     padding: 20px;
@@ -45,14 +58,25 @@
         width: 100%;
         height: 30px;
         margin: auto;
-        border: none;
+        border: 0.4px solid grey;
+        border-radius: 10px;
+        background: none;
+        font-family: 'Fredericka the Great', cursive;
     }
 }
 .container-bottom {
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .taskList {
-    width: 500px;
+    width: 200px;
     margin: auto;
+    font-family: 'Reenie Beanie', cursive;
+}
+
+.list-item {
+    list-style: disc;
+    font-size: 40px;
 }

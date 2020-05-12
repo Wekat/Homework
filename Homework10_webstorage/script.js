@@ -50,7 +50,7 @@ function populateList () {
     for (i = 0; i < storage.length; i++) { //loop through storage array to create list
         let taskList = $('<ul></ul>');
         taskList.append(`
-        <li>${storage[i]}</li>
+        <li class="list-item">${storage[i]}</li>
         `);
         $('#taskList').append(taskList);
     }
